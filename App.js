@@ -12,61 +12,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Markdown from 'react-native-markdown-package';
 
 const text = `
- # This is Heading 1
- ## This is Heading 2
- 1. List1
- 2. List2
-   This is a \`description\`  for List2 .\n
-   * test
-   * test
- 3. List3
- 4. List4\n
- * Unique list char1 ß
- * Unique list char2 ß
- * Unique list char3 ß
- - Not bold &
- - **Manually set to bold &**
- - Suddenly bold & \n
-
- You can also put some url as a link [like This](https://www.google.com) or write it as a plain text:
-   https://www.google.com
-   <mailme@gmail.com>
-
-   \n
-
- ---
-  
- This text should be printed between horizontal rules
-  
- ---
-
- The following code is an example for codeblock:
-  
-     const a = function() {
-       runSomeFunction()
-     };
- 
-     \n
- Below is some example to print blockquote
- > Test block Quote
- > Another  block Quote
-
- \n
-
- this is _italic_ 
- this is **strong**
- Some *really* ~~basic~~ **Markdown**.
-
- \n
-
- | # | Name   | Age 
- |---|--------|-----|
- | 1 | John   | 19  |
- | 2 | Sally  | 18  |
- | 3 | Stream | 20  |
- 
- \n
- this is an example for adding picture with prefix:
+ # This is an example for adding picture with prefix:
  ![rn_package](/uploads/0a3a66e439661bc47cd3ff6619047dcf/rn_package.png)
  `;
 
@@ -83,9 +29,6 @@ class App extends Component<{}> {
             onLink={url => Linking.openURL(url)}
             imagePrefix="https://gitlab.com/avul/my_project">
             {text}
-          </Markdown>
-          <Markdown styles={markdownStyle.singleLineMd}>
-            this is a test single line md
           </Markdown>
         </View>
       </ScrollView>
